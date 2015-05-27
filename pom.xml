@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring-boot</groupId>
-    <artifactId>com.teutit.auction-rest-application</artifactId>
+    <artifactId>auction-rest-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <!-- Inherit defaults from Spring Boot -->
