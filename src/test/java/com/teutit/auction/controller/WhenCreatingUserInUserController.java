@@ -34,17 +34,17 @@ public class WhenCreatingUserInUserController {
         User user = new User();
         User result = userController.createUser(user);
 
-        assertUserCreated(returnedUser, user, result);
+        assertUserHasBeenCreated(returnedUser, user, result);
     }
 
-    private void assertUserCreated(User returnedUser, User user, User result) {
-        verify(userService, times(1)).saveUser(user);
+    private void assertUserHasBeenCreated(User returnedUser, User user, User result) {
+        verify(userService, times(1)).save(user);
         assertEquals("Returned user should come from the service", returnedUser, result);
     }
 
     private User givenUserService() {
         User returnedUser = new User();
-        when(userService.saveUser(any(User.class))).thenReturn(returnedUser);
+        when(userService.save(any(User.class))).thenReturn(returnedUser);
         return returnedUser;
     }
 

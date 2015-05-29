@@ -1,11 +1,10 @@
 package com.teutit.auction.controller;
 
 import com.teutit.auction.domain.User;
+import com.teutit.auction.exception.UserAlreadyExistsException;
 import com.teutit.auction.service.UserService;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -21,6 +20,12 @@ public class UserController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public User createUser(@RequestBody @Valid final User user) {
-        return userService.saveUser(user);
+        return userService.save(user);
+    }
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public String handleUserAlreadyExistsException(UserAlreadyExistsException e) {
+        return e.getMessage();
     }
 }
