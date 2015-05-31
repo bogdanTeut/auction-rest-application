@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rest-client version="3.2.2"><request><http-version>1.1</http-version><http-follow-redirects/><URL>http://localhost:8080/user</URL><method>POST</method><body><string content-type="application/json" charset="UTF-8">{ "id": "test_id", "password": "test_password" }</string></body></request></rest-client>
