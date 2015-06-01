@@ -2,11 +2,15 @@ package com.teutit.auction.controller;
 
 import com.teutit.auction.domain.User;
 import com.teutit.auction.service.UserService;
+import com.teutit.auction.utils.UserUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Matchers.any;
@@ -31,10 +35,19 @@ public class WhenCreatingUserInUserController {
     public void givenCorrectPayloadWithUniqueId_thenItShouldCreateUser(){
         User returnedUser = givenUserService();
 
-        User user = new User();
+        User user = UserUtils.createUser();
         User result = userController.createUser(user);
 
         assertUserHasBeenCreated(returnedUser, user, result);
+    }
+
+    @Test
+    public void givenTenUsersInDB_thenItShouldReturnThem(){
+        givenUserServiceWithTenUsers();
+
+        userController.listUsers();
+
+        verify(userService, times(1)).listUsers();
     }
 
     private void assertUserHasBeenCreated(User returnedUser, User user, User result) {
@@ -43,9 +56,13 @@ public class WhenCreatingUserInUserController {
     }
 
     private User givenUserService() {
-        User returnedUser = new User();
+        User returnedUser = UserUtils.createUser();
         when(userService.save(any(User.class))).thenReturn(returnedUser);
         return returnedUser;
+    }
+
+    private void givenUserServiceWithTenUsers() {
+        when(userService.listUsers()).thenReturn(UserUtils.createUserList(10));
     }
 
 }

@@ -3,12 +3,14 @@ package com.teutit.auction.service;
 import com.teutit.auction.domain.User;
 import com.teutit.auction.exception.UserAlreadyExistsException;
 import com.teutit.auction.repository.UserRepository;
-import junit.framework.Assert;
+import com.teutit.auction.utils.UserUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -32,8 +34,8 @@ public class WhenCreatingUserInUserService {
     public void givenCorrectPayloadWithUniqueId_thenItShouldCreateUser(){
         User returnedUser = givenUserRepository();
         
-        User user = new User();
-        User result = userService.saveUser(user);
+        User user = new User("id", "password");
+        User result = userService.save(user);
 
         assertUserHasBeenCreated(returnedUser, user, result);
     }
@@ -43,13 +45,27 @@ public class WhenCreatingUserInUserService {
         givenUserRepositoryWithExistingUser();
 
         try{
-            User user = new User();
-            userService.saveUser(user);
+            userService.save(UserUtils.createUser());
             fail("It should have thrown an exception by now");
         }catch (UserAlreadyExistsException uaee){
 
         }
         verify(userRepository, never()).save(any(User.class));
+    }
+
+    @Test
+    public void givenTenUsersInDB_thenItShouldReturnThem(){
+        givenUserRepositoryWithTenUsers();
+
+        List<User> result = userService.listUsers();
+
+        verify(userRepository, times(1)).findAll();
+        assertEquals(10, result.size());
+
+    }
+
+    private void givenUserRepositoryWithTenUsers() {
+        when(userRepository.findAll()).thenReturn(UserUtils.createUserList(10));
     }
 
     private void assertUserHasBeenCreated(User returnedUser, User user, User result) {
@@ -58,13 +74,13 @@ public class WhenCreatingUserInUserService {
     }
 
     private User givenUserRepository() {
-        User returnedUser = new User();
+        User returnedUser = UserUtils.createUser();
         when(userRepository.save(any(User.class))).thenReturn(returnedUser);
         return returnedUser;
     }
 
     private User givenUserRepositoryWithExistingUser() {
-        User returnedUser = new User();
+        User returnedUser = UserUtils.createUser();
         when(userRepository.findOne(returnedUser.getId())).thenReturn(returnedUser);
         return returnedUser;
     }
