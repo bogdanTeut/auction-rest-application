@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac0a580-9470-40af-abc6-6da272c6dc1c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\encodings.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_1_3.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__ch_qos_logback_logback_core_1_1_3.xml" afterPath="" />
@@ -44,21 +41,9 @@
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_12.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_12.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_aop_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_beans_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_context_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_core_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_expression_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_web_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_springframework_spring_webmvc_4_2_0_BUILD_SNAPSHOT.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\libraries\Maven__org_yaml_snakeyaml_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\modules.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\thriftCompiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\microservices\auction-rest-application\auction-rest-application.iml" afterPath="" />
     </list>
     <ignored path="auction-rest-application.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -242,6 +227,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="auction-rest-application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auction-rest-application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auction-rest-application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,12 +605,19 @@
       <option name="number" value="Default" />
       <updated>1432570562854</updated>
       <workItem from="1432715727365" duration="2944000" />
-      <workItem from="1433158308741" duration="188000" />
+      <workItem from="1433158308741" duration="302000" />
     </task>
+    <task id="LOCAL-00001" summary="Removing .idea folder from commit">
+      <created>1433158590178</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1433158590178</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3132000" />
+    <option name="totallyTimeSpent" value="3246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -620,6 +626,7 @@
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -641,7 +648,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -663,6 +669,8 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
+    <MESSAGE value="Removing .idea folder from commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing .idea folder from commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
