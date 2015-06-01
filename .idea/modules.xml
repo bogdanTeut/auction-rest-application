@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/com.teutit.auction-rest-application.iml" filepath="$PROJECT_DIR$/com.teutit.auction-rest-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auction-rest-application.iml" filepath="$PROJECT_DIR$/auction-rest-application.iml" />
     </modules>
   </component>
 </project>
