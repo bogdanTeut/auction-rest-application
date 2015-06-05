@@ -4,15 +4,20 @@ import com.teutit.auction.domain.User;
 import com.teutit.auction.exception.UserAlreadyExistsException;
 import com.teutit.auction.repository.UserRepository;
 import com.teutit.auction.utils.UserUtils;
+import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
@@ -38,6 +43,7 @@ public class WhenCreatingUserInUserService {
         User result = userService.save(user);
 
         assertUserHasBeenCreated(returnedUser, user, result);
+        assertThat("", CoreMatchers.allOf(notNullValue(), instanceOf(String.class)));
     }
 
     @Test

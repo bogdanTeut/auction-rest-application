@@ -22,7 +22,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    User() {
+    public User() {
     }
 
     public User(final String id, final String password) {
@@ -31,6 +31,9 @@ public class User {
     }
     public String getId() {
         return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
     public String getPassword() {
         return password;
@@ -45,4 +48,5 @@ public class User {
                 .add("password", password)
                 .toString();
     }
+
 }
